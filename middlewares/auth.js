@@ -4,7 +4,6 @@ const {verifyToken} = require('../helpers/jwt')
 async function authenticate (req, res, next) {
   try {
     const user = verifyToken(req.headers.token, process.env.SECRETKEY)
-    console.log(user)
     const data = await User.findOne({
       where: {
         id: user.id,

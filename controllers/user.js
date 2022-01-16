@@ -47,13 +47,13 @@ class UserController {
           } else {
             next({
               code: 403,
-              message: 'Invalid E-Mail / Password'
+              message: 'Invalid Username / Password'
             })
           }
         } else {
           next({
             code: 403,
-            message: 'Invalid E-Mail / Password'
+            message: 'Invalid Username / Password'
           })
         }
       })
